@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: large;
+  background-color: #303841;
+}
+
+button {
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  background-color: #c7f6f5;
+  opacity: 70%;
+}
+
+button:hover {
+  opacity: 100%;
+}
+
+main .calcuArea {
+  /* Grid Housing the calculator */
+  min-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas: "input input input input" "input input input input" "erase erase percent devide" "button7 button8 button9 multi" "button4 button5 button6 subs" "button1 button2 button3 solve" "button0 button0 deci equals";
+  /* Each seprate button of the calculator*/
+}
+main .calcuArea__input {
+  grid-area: input;
+  background-color: #303841;
+}
+main .calcuArea__0 {
+  grid-area: button0;
+}
+main .calcuArea__1 {
+  grid-area: button1;
+}
+main .calcuArea__2 {
+  grid-area: button2;
+}
+main .calcuArea__3 {
+  grid-area: button3;
+}
+main .calcuArea__4 {
+  grid-area: button4;
+}
+main .calcuArea__5 {
+  grid-area: button5;
+}
+main .calcuArea__6 {
+  grid-area: button6;
+}
+main .calcuArea__7 {
+  grid-area: button7;
+}
+main .calcuArea__8 {
+  grid-area: button8;
+}
+main .calcuArea__9 {
+  grid-area: button9;
+}
+main .calcuArea__decimal {
+  grid-area: deci;
+  background-color: #ff8ab4;
+}
+main .calcuArea__equals {
+  grid-area: equals;
+  background-color: #fdda16;
+}
+main .calcuArea__add {
+  grid-area: solve;
+  background-color: #ff8ab4;
+}
+main .calcuArea__subtract {
+  grid-area: subs;
+  background-color: #ff8ab4;
+}
+main .calcuArea__multiply {
+  grid-area: multi;
+  background-color: #ff8ab4;
+}
+main .calcuArea__devide {
+  grid-area: devide;
+  background-color: #ff8ab4;
+}
+main .calcuArea__percent {
+  grid-area: percent;
+  background-color: #ff8ab4;
+}
+main .calcuArea__clear {
+  grid-area: erase;
+  background-color: #ff8ab4;
+}

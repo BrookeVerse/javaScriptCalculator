@@ -1,0 +1,88 @@
+@use "./base.scss" as *;
+
+main {
+  .calcuArea {
+    /* Grid Housing the calculator */
+    min-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+      "input input input input"
+      "input input input input"
+      "erase erase percent devide"
+      "button7 button8 button9 multi"
+      "button4 button5 button6 subs"
+      "button1 button2 button3 solve"
+      "button0 button0 deci equals";
+    /* Each seprate button of the calculator*/
+    &__input {
+      grid-area: input;
+      background-color: $primary-colour;
+    }
+    &__0 {
+      grid-area: button0;
+    }
+    &__1 {
+      grid-area: button1;
+    }
+    &__2 {
+      grid-area: button2;
+    }
+    &__3 {
+      grid-area: button3;
+    }
+    &__4 {
+      grid-area: button4;
+    }
+    &__5 {
+      grid-area: button5;
+    }
+    &__6 {
+      grid-area: button6;
+    }
+    &__7 {
+      grid-area: button7;
+    }
+    &__8 {
+      grid-area: button8;
+    }
+    &__9 {
+      grid-area: button9;
+    }
+
+    &__decimal {
+      grid-area: deci;
+      background-color: $secondary-color;
+    }
+    &__equals {
+      grid-area: equals;
+      background-color: #fdda16;
+    }
+    &__add {
+      grid-area: solve;
+      background-color: $secondary-color;
+    }
+    &__subtract {
+      grid-area: subs;
+      background-color: $secondary-color;
+    }
+    &__multiply {
+      grid-area: multi;
+      background-color: $secondary-color;
+    }
+    &__devide {
+      grid-area: devide;
+      background-color: $secondary-color;
+    }
+    &__percent {
+      grid-area: percent;
+      background-color: $secondary-color;
+    }
+    &__clear {
+      grid-area: erase;
+      background-color: $secondary-color;
+    }
+  }
+}

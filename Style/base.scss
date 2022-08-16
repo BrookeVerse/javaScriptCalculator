@@ -1,0 +1,22 @@
+$primary-colour: #303841;
+$secondary-color: #ff8ab4;
+$tertiary-color: #c7f6f5;
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: large;
+  background-color: $primary-colour;
+}
+
+button {
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  background-color: $tertiary-color;
+  opacity: 70%;
+}
+
+button:hover {
+  opacity: 100%;
+}
