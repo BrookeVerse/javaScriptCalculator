@@ -7,9 +7,8 @@ main {
     min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-template-areas:
-      "input input input input"
       "input input input input"
       "erase erase percent devide"
       "button7 button8 button9 multi"
@@ -19,7 +18,10 @@ main {
     /* Each seprate button of the calculator*/
     &__input {
       grid-area: input;
-      background-color: $primary-colour;
+      margin: 20px;
+      text-align: right;
+      font-size: larger;
+      color: white;
     }
     &__0 {
       grid-area: button0;
