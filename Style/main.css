@@ -29,10 +29,10 @@ main .calcuArea {
 }
 main .calcuArea__input {
   grid-area: input;
-  color: white;
   margin: 20px;
   text-align: right;
   font-size: larger;
+  color: white;
 }
 main .calcuArea__0 {
   grid-area: button0;
