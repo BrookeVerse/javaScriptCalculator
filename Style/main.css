@@ -23,13 +23,16 @@ main .calcuArea {
   min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  grid-template-areas: "input input input input" "input input input input" "erase erase percent devide" "button7 button8 button9 multi" "button4 button5 button6 subs" "button1 button2 button3 solve" "button0 button0 deci equals";
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas: "input input input input" "erase erase percent devide" "button7 button8 button9 multi" "button4 button5 button6 subs" "button1 button2 button3 solve" "button0 button0 deci equals";
   /* Each seprate button of the calculator*/
 }
 main .calcuArea__input {
   grid-area: input;
-  background-color: #303841;
+  color: white;
+  margin: 20px;
+  text-align: right;
+  font-size: larger;
 }
 main .calcuArea__0 {
   grid-area: button0;
