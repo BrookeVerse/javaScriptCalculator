@@ -1,6 +1,6 @@
 //Function for addition
-const simpleAddition = (a, b) => {
-  return a + b;
+const simpleAddition = (firstNumber, secondNumber) => {
+  return firstNumber + secondNumber;
 };
 console.log(simpleAddition(1, 2));
 
