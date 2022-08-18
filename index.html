@@ -14,7 +14,7 @@
       <!--House of the calculator-->
       <div class="calcuArea">
         <!--Each seperate button-->
-        <div class="calcuArea__display"></div>
+        <div class="calcuArea__display">0</div>
         <button value="0" class="calcuArea__number calcuArea__0">0</button>
         <button value="1" class="calcuArea__number calcuArea__1">1</button>
         <button value="2" class="calcuArea__number calcuArea__2">2</button>
@@ -22,21 +22,32 @@
         <button value="4" class="calcuArea__number calcuArea__4">4</button>
         <button value="5" class="calcuArea__number calcuArea__5">5</button>
         <button value="6" class="calcuArea__number calcuArea__6">6</button>
-        <button value="7" class="calcuArea__numbercalcuArea__7">7</button>
+        <button value="7" class="calcuArea__number calcuArea__7">7</button>
         <button value="8" class="calcuArea__number calcuArea__8">8</button>
         <button value="9" class="calcuArea__number calcuArea__9">9</button>
-        <button class="calcuArea__operator calcuArea__decimal">.</button>
-        <button class="calcuArea__operator calcuArea__equals">=</button>
-        <button class="calcuArea__operator calcuArea__add">+</button>
+        <button value="." class="calcuArea__operator calcuArea__decimal">
+          .
+        </button>
+        <button value="=" class="calcuArea__operator calcuArea__equals">
+          =
+        </button>
+        <button value="+" class="calcuArea__operator calcuArea__add">+</button>
         <button
+          value="-"
           class="calcuArea__operator calcuArea__subtract"
           data-action="subtract"
         >
           -
         </button>
-        <button class="calcuArea__operator calcuArea__multiply">x</button>
-        <button class="calcuArea__operator calcuArea__devide">/</button>
-        <button class="calcuArea__operator calcuArea__percent">%</button>
+        <button value="x" class="calcuArea__operator calcuArea__multiply">
+          x
+        </button>
+        <button value="/" class="calcuArea__operator calcuArea__devide">
+          /
+        </button>
+        <button value="%" class="calcuArea__operator calcuArea__percent">
+          %
+        </button>
         <button class="calcuArea__operator calcuArea__clear">c</button>
       </div>
     </main>
