@@ -16,7 +16,8 @@ main {
       "button1 button2 button3 solve"
       "button0 button0 deci equals";
     /* Each seprate button of the calculator*/
-    &__input {
+
+    &__display {
       grid-area: input;
       margin: 20px;
       text-align: right;

@@ -27,7 +27,7 @@ main .calcuArea {
   grid-template-areas: "input input input input" "erase erase percent devide" "button7 button8 button9 multi" "button4 button5 button6 subs" "button1 button2 button3 solve" "button0 button0 deci equals";
   /* Each seprate button of the calculator*/
 }
-main .calcuArea__input {
+main .calcuArea__display {
   grid-area: input;
   margin: 20px;
   text-align: right;
