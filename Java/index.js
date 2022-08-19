@@ -1,16 +1,19 @@
-//The Collection for the data needed
+//querySeclectors are collecting data for values of each variable
 const numbers = document.querySelectorAll(".calcuArea__number");
 const display = document.querySelector(".calcuArea__display");
 const clearButton = document.querySelector(".calcuArea__clear");
 const equalsButton = document.querySelector(".calcuArea__equals");
 const operators = document.querySelectorAll(".calcuArea__operator");
+//These selectors are housing the values from the eventListeners and results of functions
 let firstNumber = "";
 let secondNumber = "";
 let firstOperator = "";
 let totalOutput = "";
 let resultSum = "";
 
-//handling when a number is being clicked
+/*This function is being triggered by eventListeners to collect the value of when a button is clicked and storing it in seperate values
+It is also being controlled by an If statement that will change the variable values are being stored
+Then changing the display so the user can see what they are doing.*/
 const handleNumberPress = (event) => {
   let inputtedNumber = event.target.value;
   console.log(operators, typeof operators);
@@ -25,7 +28,7 @@ const handleNumberPress = (event) => {
   }
 };
 
-//This is handling when an operator is being clicked.
+//This is handling when the eventListener for a operator button is clicked collecting the value and updating the display
 const handleOperatorPress = (event) => {
   console.log(event.target.value);
   firstOperator = event.target.value;
@@ -33,12 +36,17 @@ const handleOperatorPress = (event) => {
   display.textContent = totalOutput;
 };
 
-//This is the event listener for when a number button is clicked
+//This is the event listener for when a number button is clicked and triggering the handleNumberPress function
 numbers.forEach((number) => {
   number.addEventListener("click", handleNumberPress);
 });
 
-//this is going to clear the display and then allow new input
+//this will be the event listener for operator buttons is clicked and triggering the handleOperator function
+operators.forEach((operator) => {
+  operator.addEventListener("click", handleOperatorPress);
+});
+
+//This will listen to the click of the clearButton and fun the function to clear all stored values and reset the display
 clearButton.addEventListener("click", () => {
   display.textContent = "0";
   firstNumber = "";
@@ -47,39 +55,34 @@ clearButton.addEventListener("click", () => {
   totalArray = "";
 });
 
-//this will be the event listener for operators
-operators.forEach((operator) => {
-  operator.addEventListener("click", handleOperatorPress);
-});
-
-// function for output results
+// This function changes the display to show all values that have been collected by the fucntions above
 const handleOutput = () => {
   display.textContent = firstNumber + firstOperator + secondNumber;
 };
 
-//simple addition function
+//This is a simple addition function
 let simpleAddition = (a, b) => {
   return a + b;
 };
-//simple subtraction function
+//This is a simple subtraction function
 const simpleSubtract = (a, b) => {
   return a - b;
 };
-//simple divide function
+//This is a simple divide function
 const simpleDivision = (a, b) => {
   return a / b;
 };
-//simple multiplication function
+//This is a simple multiplication function
 const simpleMultiply = (a, b) => {
   return a * b;
 };
 
-//simple percentage function
+//This is a simple percentage function
 const simplePercentage = (a, b) => {
   return (a / b) * 100;
 };
 
-//switch case that will register what operator has been clicked and what function to call
+//This switch case will register what operator has been clicked and what equation function to call upon
 let inputOperator = () => {
   switch (firstOperator) {
     case "+":
@@ -100,10 +103,10 @@ let inputOperator = () => {
         parseInt(secondNumber)
       );
   }
-  //this is change the display to the result of the sum function
+  //This will change the display to the result of the equation functions that have been called by the operator click
   totalOutput = resultSum;
   display.textContent = totalOutput;
 };
 
-//equals to push through to my switch case
+//This equals eventListener will triger the switch case to run through what operator has been used and what function to call
 equalsButton.addEventListener("click", inputOperator);

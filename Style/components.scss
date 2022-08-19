@@ -16,15 +16,16 @@ main {
       "button4 button5 button6 subs"
       "button1 button2 button3 solve"
       "button0 button0 deci equals";
-    /* Each seprate button of the calculator*/
 
+    /*The display CSS being used for the output of equations*/
     &__display {
       grid-area: input;
-      margin-top: 100px;
+      margin-top: 150px;
       text-align: right;
       font-size: 100px;
       color: white;
     }
+    /*This is the buttons, mostly being used for the grid and some css*/
     &__0 {
       grid-area: button0;
     }
@@ -88,5 +89,19 @@ main {
       grid-area: erase;
       background-color: $secondary-color;
     }
+  }
+}
+// Responsive: Making the buttons more visable on smaller and larger screens
+@media screen and (max-width: 320px) {
+  button {
+    margin: 2px;
+    font-size: 50px;
+    font-weight: lighter;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  button {
+    font-size: 50px;
   }
 }

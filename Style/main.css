@@ -10,6 +10,8 @@ button {
   border: none;
   border-radius: 20px;
   background-color: #c7f6f5;
+  font-size: 30px;
+  font-weight: bolder;
   opacity: 70%;
 }
 
@@ -29,7 +31,7 @@ main .calcuArea {
 }
 main .calcuArea__display {
   grid-area: input;
-  margin-top: 100px;
+  margin-top: 150px;
   text-align: right;
   font-size: 100px;
   color: white;
@@ -95,4 +97,17 @@ main .calcuArea__percent {
 main .calcuArea__clear {
   grid-area: erase;
   background-color: #ff8ab4;
+}
+
+@media screen and (max-width: 320px) {
+  button {
+    margin: 2px;
+    font-size: 50px;
+    font-weight: lighter;
+  }
+}
+@media screen and (min-width: 1440px) {
+  button {
+    font-size: 50px;
+  }
 }
