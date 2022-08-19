@@ -53,12 +53,9 @@ operators.forEach((operator) => {
 });
 
 // function for output results
-
 const handleOutput = () => {
   display.textContent = firstNumber + firstOperator + secondNumber;
 };
-
-//switch case that will register what operator has been clicked and what function to call
 
 //simple addition function
 let simpleAddition = (a, b) => {
@@ -78,11 +75,11 @@ const simpleMultiply = (a, b) => {
   return a * b;
 };
 
+//switch case that will register what operator has been clicked and what function to call
 let inputOperator = () => {
   switch (firstOperator) {
     case "+":
       resultSum = simpleAddition(parseInt(firstNumber), parseInt(secondNumber));
-
       break;
     case "-":
       resultSum = simpleSubtract(parseInt(firstNumber), parseInt(secondNumber));
@@ -94,6 +91,7 @@ let inputOperator = () => {
       resultSum = simpleMultiply(parseInt(firstNumber), parseInt(secondNumber));
       break;
   }
+  //this is change the display to the result of the sum function
   totalOutput = resultSum;
   display.textContent = totalOutput;
 };
