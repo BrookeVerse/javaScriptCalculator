@@ -18,18 +18,12 @@ const handleNumberPress = (event) => {
     firstNumber += inputtedNumber.toString();
     totalOutput = firstNumber;
     display.textContent = totalOutput;
-    console.log("is getting here.", firstNumber);
   } else {
     secondNumber += inputtedNumber.toString();
-    console.log("is getting here!", secondNumber);
     totalOutput = firstNumber + firstOperator + secondNumber;
     display.textContent = totalOutput;
   }
 };
-//Just so I can see what is happening
-console.log(firstNumber);
-console.log(secondNumber);
-console.log(firstOperator);
 
 //This is handling when an operator is being clicked.
 const handleOperatorPress = (event) => {
@@ -75,6 +69,14 @@ let simpleAddition = (a, b) => {
 const simpleSubtract = (a, b) => {
   return a - b;
 };
+//simple divide function
+const simpleDivision = (a, b) => {
+  return a / b;
+};
+//simple multiplication function
+const simpleMultiply = (a, b) => {
+  return a * b;
+};
 
 let inputOperator = () => {
   switch (firstOperator) {
@@ -86,10 +88,10 @@ let inputOperator = () => {
       resultSum = simpleSubtract(parseInt(firstNumber), parseInt(secondNumber));
       break;
     case "/":
+      resultSum = simpleDivision(parseInt(firstNumber), parseInt(secondNumber));
       break;
-    case "*":
-      break;
-    case "=":
+    case "x":
+      resultSum = simpleMultiply(parseInt(firstNumber), parseInt(secondNumber));
       break;
   }
   totalOutput = resultSum;
