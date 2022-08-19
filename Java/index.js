@@ -8,6 +8,7 @@ let firstNumber = "";
 let secondNumber = "";
 let firstOperator = "";
 let totalOutput = "";
+let resultSum = "";
 
 //handling when a number is being clicked
 const handleNumberPress = (event) => {
@@ -63,24 +64,26 @@ const handleOutput = () => {
   display.textContent = firstNumber + firstOperator + secondNumber;
 };
 
-//equals to push through to my switch case
-equalsButton.addEventListener("click", (event) => {
-  inputOperator;
-});
 //switch case that will register what operator has been clicked and what function to call
 
 //simple addition function
-const simpleAddition = (a, b) => {
-  return parseInt(a, firstNumber) + parseInt(b, secondNumber);
+let simpleAddition = (a, b) => {
+  const addition = a + b;
+  return addition;
 };
-console.log(simpleAddition(firstNumber, secondNumber));
+//simple subtraction function
+const simpleSubtract = (a, b) => {
+  return a - b;
+};
 
 let inputOperator = () => {
-  switch (operators) {
+  switch (firstOperator) {
     case "+":
-      simpleAddition;
+      resultSum = simpleAddition(parseInt(firstNumber), parseInt(secondNumber));
+
       break;
     case "-":
+      resultSum = simpleSubtract(parseInt(firstNumber), parseInt(secondNumber));
       break;
     case "/":
       break;
@@ -89,4 +92,9 @@ let inputOperator = () => {
     case "=":
       break;
   }
+  totalOutput = resultSum;
+  display.textContent = totalOutput;
 };
+
+//equals to push through to my switch case
+equalsButton.addEventListener("click", inputOperator);
