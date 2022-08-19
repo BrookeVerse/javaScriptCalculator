@@ -39,7 +39,7 @@ numbers.forEach((number) => {
 });
 
 //this is going to clear the display and then allow new input
-clearButton.addEventListener("click", (event) => {
+clearButton.addEventListener("click", () => {
   display.textContent = "0";
   firstNumber = "";
   secondNumber = "";
@@ -59,8 +59,7 @@ const handleOutput = () => {
 
 //simple addition function
 let simpleAddition = (a, b) => {
-  const addition = a + b;
-  return addition;
+  return a + b;
 };
 //simple subtraction function
 const simpleSubtract = (a, b) => {
@@ -73,6 +72,11 @@ const simpleDivision = (a, b) => {
 //simple multiplication function
 const simpleMultiply = (a, b) => {
   return a * b;
+};
+
+//simple percentage function
+const simplePercentage = (a, b) => {
+  return (a / b) * 100;
 };
 
 //switch case that will register what operator has been clicked and what function to call
@@ -90,6 +94,11 @@ let inputOperator = () => {
     case "x":
       resultSum = simpleMultiply(parseInt(firstNumber), parseInt(secondNumber));
       break;
+    case "%":
+      resultSum = simplePercentage(
+        parseInt(firstNumber),
+        parseInt(secondNumber)
+      );
   }
   //this is change the display to the result of the sum function
   totalOutput = resultSum;

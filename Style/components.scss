@@ -7,8 +7,9 @@ main {
     min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     grid-template-areas:
+      "input input input input"
       "input input input input"
       "erase erase percent devide"
       "button7 button8 button9 multi"
@@ -19,9 +20,9 @@ main {
 
     &__display {
       grid-area: input;
-      margin: 20px;
+      margin-top: 100px;
       text-align: right;
-      font-size: larger;
+      font-size: 100px;
       color: white;
     }
     &__0 {
