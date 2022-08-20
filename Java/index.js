@@ -23,7 +23,7 @@ const handleNumberPress = (event) => {
     display.textContent = totalOutput;
   } else {
     secondNumber += inputtedNumber.toString();
-    totalOutput = firstNumber + firstOperator + secondNumber;
+    totalOutput = firstNumber + " " + firstOperator + " " + secondNumber;
     display.textContent = totalOutput;
   }
 };
@@ -32,7 +32,7 @@ const handleNumberPress = (event) => {
 const handleOperatorPress = (event) => {
   console.log(event.target.value);
   firstOperator = event.target.value;
-  totalOutput = firstNumber + firstOperator;
+  totalOutput = firstNumber + " " + firstOperator;
   display.textContent = totalOutput;
 };
 
@@ -57,7 +57,7 @@ clearButton.addEventListener("click", () => {
 
 // This function changes the display to show all values that have been collected by the fucntions above
 const handleOutput = () => {
-  display.textContent = firstNumber + firstOperator + secondNumber;
+  display.textContent = firstNumber + " " + firstOperator + " " + secondNumber;
 };
 
 //This is a simple addition function
@@ -87,21 +87,36 @@ let inputOperator = () => {
   switch (firstOperator) {
     case "+":
       resultSum = simpleAddition(parseInt(firstNumber), parseInt(secondNumber));
+      firstNumber = "";
+      secondNumber = "";
+      firstOperator = "";
       break;
     case "-":
       resultSum = simpleSubtract(parseInt(firstNumber), parseInt(secondNumber));
+      firstNumber = "";
+      secondNumber = "";
+      firstOperator = "";
       break;
     case "/":
       resultSum = simpleDivision(parseInt(firstNumber), parseInt(secondNumber));
+      firstNumber = "";
+      secondNumber = "";
+      firstOperator = "";
       break;
     case "x":
       resultSum = simpleMultiply(parseInt(firstNumber), parseInt(secondNumber));
+      firstNumber = "";
+      secondNumber = "";
+      firstOperator = "";
       break;
     case "%":
       resultSum = simplePercentage(
         parseInt(firstNumber),
         parseInt(secondNumber)
       );
+      firstNumber = "";
+      secondNumber = "";
+      firstOperator = "";
   }
   //This will change the display to the result of the equation functions that have been called by the operator click
   totalOutput = resultSum;
