@@ -16,7 +16,6 @@ It is also being controlled by an If statement that will change the variable val
 Then changing the display so the user can see what they are doing.*/
 const handleNumberPress = (event) => {
   let inputtedNumber = event.target.value;
-  console.log(operators, typeof operators);
   if (firstOperator === "") {
     firstNumber += inputtedNumber.toString();
     totalOutput = firstNumber;
@@ -30,7 +29,6 @@ const handleNumberPress = (event) => {
 
 //This is handling when the eventListener for a operator button is clicked collecting the value and updating the display
 const handleOperatorPress = (event) => {
-  console.log(event.target.value);
   firstOperator = event.target.value;
   totalOutput = firstNumber + " " + firstOperator;
   display.textContent = totalOutput;
@@ -121,6 +119,12 @@ let inputOperator = () => {
   //This will change the display to the result of the equation functions that have been called by the operator click
   totalOutput = resultSum;
   display.textContent = totalOutput;
+  //This if statement will allow you to do another equation with the results of the first.
+  if (resultSum !== null) {
+    handleOperatorPress;
+    firstNumber = resultSum;
+    handleNumberPress;
+  }
 };
 
 //This equals eventListener will triger the switch case to run through what operator has been used and what function to call
