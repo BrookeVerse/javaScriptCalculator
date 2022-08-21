@@ -77,40 +77,52 @@ const simpleMultiply = (a, b) => {
 
 //This is a simple percentage function
 const simplePercentage = (a, b) => {
-  return (a / b) * 100;
+  return (a / 100) * b;
 };
 
 //This switch case will register what operator has been clicked and what equation function to call upon
 let inputOperator = () => {
   switch (firstOperator) {
     case "+":
-      resultSum = simpleAddition(parseInt(firstNumber), parseInt(secondNumber));
+      resultSum = simpleAddition(
+        parseFloat(firstNumber),
+        parseFloat(secondNumber)
+      );
       firstNumber = "";
       secondNumber = "";
       firstOperator = "";
       break;
     case "-":
-      resultSum = simpleSubtract(parseInt(firstNumber), parseInt(secondNumber));
+      resultSum = simpleSubtract(
+        parseFloat(firstNumber),
+        parseFloat(secondNumber)
+      );
       firstNumber = "";
       secondNumber = "";
       firstOperator = "";
       break;
     case "/":
-      resultSum = simpleDivision(parseInt(firstNumber), parseInt(secondNumber));
+      resultSum = simpleDivision(
+        parseFloat(firstNumber),
+        parseFloat(secondNumber)
+      );
       firstNumber = "";
       secondNumber = "";
       firstOperator = "";
       break;
     case "x":
-      resultSum = simpleMultiply(parseInt(firstNumber), parseInt(secondNumber));
+      resultSum = simpleMultiply(
+        parseFloat(firstNumber),
+        parseFloat(secondNumber)
+      );
       firstNumber = "";
       secondNumber = "";
       firstOperator = "";
       break;
     case "%":
       resultSum = simplePercentage(
-        parseInt(firstNumber),
-        parseInt(secondNumber)
+        parseFloat(firstNumber),
+        parseFloat(secondNumber)
       );
       firstNumber = "";
       secondNumber = "";
