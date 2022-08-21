@@ -1,6 +1,6 @@
 //Function for addition
-const simpleAddition = (firstNumber, secondNumber) => {
-  return firstNumber + secondNumber;
+const simpleAddition = (a, b) => {
+  return a + b;
 };
 console.log(simpleAddition(1, 2));
 
@@ -24,6 +24,6 @@ console.log(simpleDivision(10, 2));
 
 //function for percentage
 const simplePercentage = (a, b) => {
-  return (a / b) * 100;
+  return (a / 100) * b;
 };
 console.log(simplePercentage(10, 100));
