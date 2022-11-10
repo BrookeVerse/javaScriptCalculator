@@ -1,11 +1,13 @@
-# javascriptcalculator
-
+# JavaScript calculator
+<p align="center">
+<img src="./Images/Calculator.JPG" style="border-radius:20px" height="auto" width="600">
+</p>
 ## Table of Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
-- [Contributing](../CONTRIBUTING.md)
+- [To Do](#toDo)
 
 ## About <a name = "about"></a>
 
@@ -64,4 +66,17 @@ describe("testing if the percentage function works", () => {
 
 ## Usage <a name = "usage"></a>
 
-This repo can be used to create a calculator 
+This repo can be used to create a calculator that will do simple calculations. That can be move towards a more advanced calculator. 
+
+## To Do <a name= "toDo"></a>
+
+I hope to add more features soon such as;
+- Being able to continue math functions from the result of an answer.
+
+- Not having to press clear to start a new equation.
+
+- Being able to do more complex equations.
+
+## Contributions
+
+This project was created through my training with the _nology team, so credit for this project can also go to the instructors on the team. I also worked with a collegue Karin which together we worked hard to solve the issues we were having putting together the code for this project.
